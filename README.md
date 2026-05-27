@@ -1,90 +1,113 @@
 # WEDECOR4U Atelier
 
-> Luxury interior design platform — Economical · Premium · Ultra Premium
-
-Built with **React 19 + Vite 8 + Tailwind CSS 3 + React Router 7**.
+A luxury interior design platform built with React. It offers three curated package tiers — **Economical**, **Premium**, and **Ultra Premium** — each with a tailored vendor ecosystem, material library, AI design concierge, client dashboard, staff console, and admin panel.
 
 ---
 
-## 🚀 Deploy to Vercel
+## About the Project
 
-### Option A — Vercel Dashboard (recommended)
+WEDECOR4U Atelier is a full-featured interior design studio web app. Clients can browse curated furniture and decor, explore vendor partnerships across woodwork, hardware, laminate and glass categories, book design consultations, and track active projects. Staff and admins have dedicated portals to manage projects, quotations, procurement, and analytics.
 
-1. Push the **`wedecor4u`** folder to a GitHub / GitLab / Bitbucket repository  
-   *(if it's a subfolder of a larger repo, set the Root Directory in step 3)*
+**Key features:**
+- 🏠 Home, Shop, Portfolio, Services, Hospitality, and Consultation pages
+- 🛒 Product catalogue with detail pages
+- 📦 Three-tier package system (Economical / Premium / Ultra Premium)
+- 🪵 Curated vendor library (Blum, Häfele, Saint-Gobain, Hettich, Merino, and more)
+- 💬 AI Design Concierge chatbot (Meena)
+- 📊 Client Dashboard — projects, materials, quotations, orders, wishlist
+- 🧑‍💼 Staff Console — kanban board, schedules, approvals, vendor assignment
+- ⚙️ Admin Panel — analytics, AI logs, inventory, settings
 
-2. Go to [vercel.com/new](https://vercel.com/new) → **Import Git Repository**
+---
 
-3. In the **Configure Project** screen:
-   | Setting | Value |
-   |---|---|
-   | **Root Directory** | `wedecor4u` *(only if it's inside a parent repo)* |
-   | **Framework Preset** | Vite |
-   | **Build Command** | `npm run build` |
-   | **Output Directory** | `dist` |
-   | **Install Command** | `npm install` |
+## Tech Stack
 
-4. Click **Deploy** — done ✅
+| | |
+|---|---|
+| Framework | React 19 |
+| Build Tool | Vite 8 |
+| Routing | React Router 7 |
+| Styling | Tailwind CSS 3 |
+| Icons | lucide-react |
+| Notifications | sonner |
+| Fonts | Cormorant Garamond · Playfair Display · Inter |
 
-### Option B — Vercel CLI
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or higher
+- npm
+
+### Installation
 
 ```bash
-# Install CLI
-npm i -g vercel
+# Clone the repository
+git clone https://github.com/HarshitaSharma19/wedecor4u.git
 
-# From inside the wedecor4u folder
+# Navigate into the project
 cd wedecor4u
-vercel
 
-# For production
-vercel --prod
-```
-
----
-
-## 🛠️ Local Development
-
-```bash
 # Install dependencies
 npm install
+```
 
-# Start dev server (http://localhost:5173)
+### Running Locally
+
+```bash
 npm run dev
+```
 
-# Production build
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Building for Production
+
+```bash
 npm run build
+```
 
-# Preview production build locally
+The output goes to the `dist/` folder.
+
+### Preview the Production Build
+
+```bash
 npm run preview
 ```
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-wedecor4u/
-├── public/            # Static assets (favicon, icons)
-├── src/
-│   ├── assets/        # Images (hero, portfolio, products)
-│   ├── components/    # Shared UI (SiteHeader, SiteFooter, AI Chat, PackageCard…)
-│   ├── lib/           # Data libraries (products, vendors, projects)
-│   ├── pages/         # Route pages (Home, Shop, Dashboard, Admin, Staff…)
-│   ├── App.jsx        # Router + layout shell
-│   ├── index.css      # Tailwind base + custom tokens
-│   └── main.jsx       # React entry point
-├── index.html
-├── vite.config.js     # @ alias configured
-├── tailwind.config.js # Custom colour palette (ivory, bronze, champagne…)
-├── postcss.config.js
-└── vercel.json        # SPA rewrites + security headers + caching
+src/
+├── assets/          # Images (hero, portfolio, products)
+├── components/      # Shared components (SiteHeader, SiteFooter, PackageCard, AIChatAssistant…)
+├── lib/             # Data (products.js, vendors.js, projects.js)
+├── pages/           # All route pages
+│   ├── Home.jsx
+│   ├── Shop.jsx
+│   ├── ProductDetail.jsx
+│   ├── Services.jsx
+│   ├── Hospitality.jsx
+│   ├── Portfolio.jsx
+│   ├── Materials.jsx
+│   ├── Consultation.jsx
+│   ├── Contact.jsx
+│   ├── Dashboard.jsx
+│   ├── Staff.jsx
+│   └── Admin.jsx
+├── App.jsx          # Routes and layout
+├── main.jsx         # Entry point
+└── index.css        # Tailwind + design tokens
 ```
 
 ---
 
-## 🗺️ Routes
+## Pages Overview
 
-| Path | Page |
+| Route | Page |
 |---|---|
 | `/` | Home |
 | `/shop` | Shop |
@@ -93,22 +116,8 @@ wedecor4u/
 | `/hospitality` | Hospitality |
 | `/portfolio` | Portfolio |
 | `/materials` | Materials & Vendor Library |
-| `/consultation` | Consultation |
+| `/consultation` | Book a Consultation |
 | `/contact` | Contact |
 | `/dashboard` | Client Dashboard |
 | `/staff` | Staff Console |
 | `/admin` | Admin Panel |
-
----
-
-## ⚙️ Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Framework | React 19 |
-| Build Tool | Vite 8 |
-| Routing | React Router 7 |
-| Styling | Tailwind CSS 3 |
-| Icons | lucide-react |
-| Toasts | sonner |
-| Fonts | Cormorant Garamond · Playfair Display · Inter (Google Fonts) |
