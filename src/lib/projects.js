@@ -1,0 +1,123 @@
+export const projects = [
+  {
+    id: "WD-P-001",
+    clientName: "Aanya Mehta",
+    projectName: "Bandra Penthouse · Gold",
+    property: "Penthouse",
+    location: "Bandra, Mumbai",
+    packageTier: "Ultra Premium",
+    status: "Concept",
+    designer: "Meena Iyer",
+    startDate: "01 Nov 2025",
+    estimatedEnd: "28 Feb 2026",
+    progress: 35,
+    budget: "₹42,00,000",
+    area: "4800 sq ft",
+    milestones: [
+      { label: "Initial Brief", date: "01 Nov 2025", done: true },
+      { label: "Site Survey", date: "08 Nov 2025", done: true },
+      { label: "Concept Presentation", date: "20 Nov 2025", done: true },
+      { label: "Material Approval", date: "10 Dec 2025", done: false },
+      { label: "Procurement Start", date: "15 Jan 2026", done: false },
+      { label: "Installation", date: "10 Feb 2026", done: false },
+      { label: "Handover & Shoot", date: "28 Feb 2026", done: false },
+    ],
+    materialSelections: [
+      { category: "Woodwork", vendor: "Blum", product: "MOVENTO 760H", finish: "Orion Grey", qty: "24 pairs", unitPrice: "₹8,200", totalPrice: "₹1,96,800", status: "Approved" },
+      { category: "Hardware", vendor: "Häfele", product: "Architec Door Handle", finish: "Brushed Brass", qty: "18 sets", unitPrice: "₹4,500", totalPrice: "₹81,000", status: "Approved" },
+      { category: "Glass", vendor: "Saint-Gobain", product: "Lacobel Pure White", finish: "Back-painted", qty: "220 sq ft", unitPrice: "₹850", totalPrice: "₹1,87,000", status: "Ordered" },
+      { category: "Laminate", vendor: "Royale Touche", product: "Marble Veined Panel", finish: "Sync Pore", qty: "180 sq ft", unitPrice: "₹320", totalPrice: "₹57,600", status: "Pending" },
+    ],
+  },
+  {
+    id: "WD-P-002",
+    clientName: "Karim Al-Sayed",
+    projectName: "Heritage Suite · Dubai",
+    property: "Penthouse",
+    location: "Downtown, Dubai",
+    packageTier: "Ultra Premium",
+    status: "Procurement",
+    designer: "Rohan Das",
+    startDate: "15 Sep 2025",
+    estimatedEnd: "30 Jan 2026",
+    progress: 68,
+    budget: "₹78,00,000",
+    area: "6200 sq ft",
+    milestones: [
+      { label: "Initial Brief", date: "15 Sep 2025", done: true },
+      { label: "Site Survey", date: "22 Sep 2025", done: true },
+      { label: "Concept Presentation", date: "05 Oct 2025", done: true },
+      { label: "Material Approval", date: "25 Oct 2025", done: true },
+      { label: "Procurement Start", date: "01 Nov 2025", done: true },
+      { label: "Installation", date: "10 Jan 2026", done: false },
+      { label: "Handover & Shoot", date: "30 Jan 2026", done: false },
+    ],
+    materialSelections: [
+      { category: "Hardware", vendor: "Blum", product: "SERVO-DRIVE Flex", finish: "Anthracite", qty: "12 units", unitPrice: "₹14,000", totalPrice: "₹1,68,000", status: "Ordered" },
+      { category: "Glass", vendor: "Saint-Gobain", product: "Stadip Silence", finish: "Crystal Clear", qty: "450 sq ft", unitPrice: "₹1,400", totalPrice: "₹6,30,000", status: "Delivered" },
+      { category: "Laminate", vendor: "Royale Touche", product: "Gold Leather Emboss", finish: "Soft Touch", qty: "240 sq ft", unitPrice: "₹380", totalPrice: "₹91,200", status: "Ordered" },
+    ],
+  },
+  {
+    id: "WD-P-003",
+    clientName: "Studio Verma",
+    projectName: "Atelier Refresh · Silver",
+    property: "Commercial",
+    location: "Colaba, Mumbai",
+    packageTier: "Premium",
+    status: "Install",
+    designer: "Meena Iyer",
+    startDate: "01 Oct 2025",
+    estimatedEnd: "20 Dec 2025",
+    progress: 82,
+    budget: "₹12,50,000",
+    area: "1800 sq ft",
+    milestones: [
+      { label: "Initial Brief", date: "01 Oct 2025", done: true },
+      { label: "Site Survey", date: "05 Oct 2025", done: true },
+      { label: "Concept Presentation", date: "18 Oct 2025", done: true },
+      { label: "Material Approval", date: "30 Oct 2025", done: true },
+      { label: "Procurement Start", date: "05 Nov 2025", done: true },
+      { label: "Installation", date: "05 Dec 2025", done: true },
+      { label: "Handover & Shoot", date: "20 Dec 2025", done: false },
+    ],
+    materialSelections: [
+      { category: "Woodwork", vendor: "CenturyPly", product: "Club Prime 19mm", finish: "Teak Premium", qty: "60 sheets", unitPrice: "₹95", totalPrice: "₹5,700", status: "Delivered" },
+      { category: "Hardware", vendor: "Hettich", product: "InnoTech Atira", finish: "Nickel Matt", qty: "36 sets", unitPrice: "₹2,800", totalPrice: "₹1,00,800", status: "Delivered" },
+      { category: "Laminate", vendor: "Merino", product: "Exteria Anti-FP", finish: "Brushed Metal", qty: "320 sq ft", unitPrice: "₹140", totalPrice: "₹44,800", status: "Delivered" },
+    ],
+  },
+];
+
+export const quotations = [
+  { id: "QT-2025-042", projectId: "WD-P-001", clientName: "Aanya Mehta", date: "15 Nov 2025", amount: "₹42,00,000", status: "Approved", items: 48, packageTier: "Ultra Premium" },
+  { id: "QT-2025-041", projectId: "WD-P-002", clientName: "Karim Al-Sayed", date: "28 Sep 2025", amount: "₹78,00,000", status: "Invoiced", items: 92, packageTier: "Ultra Premium" },
+  { id: "QT-2025-039", projectId: "WD-P-003", clientName: "Studio Verma", date: "20 Oct 2025", amount: "₹12,50,000", status: "Approved", items: 24, packageTier: "Premium" },
+  { id: "QT-2025-044", projectId: "", clientName: "M. Singh", date: "01 Dec 2025", amount: "₹8,20,000", status: "Draft", items: 18, packageTier: "Premium" },
+  { id: "QT-2025-043", projectId: "", clientName: "R. Kapoor", date: "28 Nov 2025", amount: "₹2,40,000", status: "Sent", items: 12, packageTier: "Economical" },
+];
+
+export const kanbanStages = [
+  { id: "onboarding", label: "Onboarding", color: "bg-taupe/20 text-taupe" },
+  { id: "concept", label: "Concept", color: "bg-champagne/30 text-bronze" },
+  { id: "procurement", label: "Procurement", color: "bg-bronze/20 text-bronze" },
+  { id: "execution", label: "Execution", color: "bg-ink/10 text-ink" },
+  { id: "complete", label: "Complete", color: "bg-green-100 text-green-700" },
+];
+
+export const vendorAnalytics = [
+  { name: "Blum", orders: 24, spend: "₹38.4L", rating: 5.0, category: "Hardware" },
+  { name: "Häfele", orders: 18, spend: "₹22.1L", rating: 4.9, category: "Hardware" },
+  { name: "Saint-Gobain", orders: 31, spend: "₹19.8L", rating: 4.9, category: "Glass" },
+  { name: "Royale Touche", orders: 12, spend: "₹9.2L", rating: 4.8, category: "Laminate" },
+  { name: "Merino", orders: 44, spend: "₹8.6L", rating: 4.7, category: "Laminate" },
+  { name: "CenturyPly", orders: 82, spend: "₹7.1L", rating: 4.7, category: "Woodwork" },
+  { name: "Hettich", orders: 56, spend: "₹6.8L", rating: 4.9, category: "Hardware" },
+  { name: "Marino", orders: 38, spend: "₹4.2L", rating: 4.5, category: "Laminate" },
+];
+
+export const packageDistribution = [
+  { tier: "Ultra Premium", count: 18, revenue: "₹3.2 Cr", percentage: 65 },
+  { tier: "Premium", count: 34, revenue: "₹1.1 Cr", percentage: 24 },
+  { tier: "Economical", count: 52, revenue: "₹52L", percentage: 11 },
+];

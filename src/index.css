@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { border-color: var(--color-border, #d4c5b0); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background, #f5f0e8);
+    color: var(--color-foreground, #1a1714);
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .font-display { font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif; }
+  .font-serif { font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; }
+  .eyebrow {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: theme('colors.bronze');
+    font-weight: 500;
+  }
+}
+
+@layer utilities {
+  .container-luxe {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4vw, 4rem);
+  }
+  .hairline {
+    border-top: 1px solid color-mix(in srgb, theme('colors.bronze') 30%, transparent);
+  }
+  .text-balance { text-wrap: balance; }
+  .gradient-overlay {
+    background: linear-gradient(to bottom, rgba(26,23,20,0.1) 0%, rgba(26,23,20,0.55) 100%);
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: radial-gradient(rgba(0,0,0,0.6) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+  .underline-hover {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.5s ease;
+  }
+  .underline-hover:hover { background-size: 100% 1px; }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: reveal 1s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+  .reveal-delay-1 { animation-delay: 0.15s; }
+  .reveal-delay-2 { animation-delay: 0.3s; }
+  .reveal-delay-3 { animation-delay: 0.45s; }
+  .reveal-delay-4 { animation-delay: 0.6s; }
+  @keyframes reveal { to { opacity: 1; transform: none; } }
+
+  .ken-burns { animation: ken 18s ease-out forwards; }
+  @keyframes ken {
+    from { transform: scale(1.08); }
+    to   { transform: scale(1); }
+  }
+}
